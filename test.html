@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<!-- <meta name="renderer" content="Webkit">
+		<meta name="author" content="tarena">
+		<meta name="keywords" content="bootstrap,html5,css3">
+		<meta name="description" content="bootstrap基本模板"> -->
+		<title>下拉菜单</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">		
+		<link rel="stylesheet" href="styles/site.css">
+		<script src="scripts/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/angular-1.4.0.js"></script>
+    <!-- 先引入controller后引入module -->
+    <script src="js/controller.js"></script>
+    <script src="js/module.js"></script>
+    <style>
+       
+  
+ 
+    </style>
+</head>
+   
+<body>
+    <!--   <div data-ng-app="" data-ng-init="ptotal='合计';pname='单价';pcount='数量';price=10.99;count=10">
+                 {{pname}}:{{price}}<br>
+                 {{pcount}}:{{count}}<br>
+                 {{ptotal}}:{{price*count}}
+      </div>
+ -->
+       <!-- <div data-ng-app="" data-ng-init="books={ptotal:'合计',pname:'单价',pcount:'数量',price:10.99,count:10}">
+                 {{books.pname}}:{{books.price}}<br>
+                 {{books.pcount}}:{{books.count}}<br>
+                 {{books.ptotal}}:{{books.price*books.count}}
+      </div> -->
+      <div data-ng-app="" data-ng-init="books=[
+      {ptotal:'合计',pname:'单价',pcount:'数量',price:10.99,count:10},
+      {ptotal:'合计',pname:'单价',pcount:'数量',price:9.99,count:10},
+      {ptotal:'合计',pname:'单价',pcount:'数量',price:8.99,count:10},    
+      ]">
+                 <!-- {{books[1].pname}}:{{books[1].price}}<br>
+                 {{books[1].pcount}}:{{books[1].count}}<br>
+                 {{books[1].ptotal}}:{{books[1].price*books[1].count}} -->
+              <div class="row">
+                   <div class="col-sm-4">
+                       <input type="text" data-ng-model="books[1].count">
+                   </div>
+                   <div class="col-sm-4">
+                        <input type="text" data-ng-model="books[1].price">
+                   </div>
+                   <div class="col-sm-4">
+                        <input type="text" data-ng-model="books[1].ptotal">
+                   </div>
+             </div>
+      </div>
+
+</body>
+
+               
+</html>
